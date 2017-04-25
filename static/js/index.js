@@ -81,6 +81,7 @@
 
 function get_translation(){
   message = $('#eng').val();
+  $('#french')..val('');
   console.log("get_translation")
   $.post('/message', {
     msg: message,
