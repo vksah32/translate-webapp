@@ -81,14 +81,15 @@
 
 function get_translation(){
   message = $('#eng').val();
-  $('#french').val('');
+  // $('#french').val('');
   console.log("get_translation")
   $.post('/message', {
     msg: message,
   }).done(function(reply) {
     console.log(reply['text'])
     // $('<p>'+reply['text'] +'</p>').appendTo('#french');
-    $('#french').append(reply['text']); 
+    $('#french').val(reply['text']);
+    // $('#french').append(reply['text']); 
 
 
 
